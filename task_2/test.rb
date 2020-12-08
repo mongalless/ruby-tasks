@@ -1,5 +1,4 @@
 require_relative 'array'
-require 'pp'
 
 array = [
   (1..2).to_a,
@@ -10,12 +9,12 @@ array = [
 
 puts "Given: #{array}"
 
-puts "Test 1:"
-pp array.rebuild! do |element|
+array.rebuild! do |element|
   element + 3
 end
+puts 'Test 1:', array
 
-puts 'Test 2:'
-pp array.rebuild! do |element, size|
+array.rebuild! do |element, size|
   element + size
 end
+puts 'Test 2:', array

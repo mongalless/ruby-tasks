@@ -1,9 +1,10 @@
-# Rebuild Array
+## Rebuild Array
 
 The goal of this task is to patch `Array` class and extend it with method which rebuilds its values
 
-## Requirement
+### Requirement
 Given the following array of integers
+
 ```ruby
 array = [
   (1..2).to_a,
@@ -14,12 +15,12 @@ array = [
 ```
 Write a function `.rebuild!` that should dynamically add a number to each element of an array
 
-## Rules
+### Rules
 1. All work should be done in `array.rb` file
 2. Ruby version doesn't matter
-3. You can't use anything except Ruby standard library. No gems allowed
+3. You can't use anything except Ruby standard library. **No gems allowed**
 
-## Example usage
+### Example usage
 ```ruby
 # Example: adds 3 to each element
 array.rebuild! do |element|
@@ -34,5 +35,5 @@ array.rebuild! do |element, size|
   element + size
 end
 # Expected result:
-# [[3, 4], [11, 12, 13, 14, 15, 16], [19, 20, 21, 22, 23, 24, 25], 15]
+# [[6, 7], [14, 15, 16, 17, 18, 19], [22, 23, 24, 25, 26, 27, 28], 18]
 ```
